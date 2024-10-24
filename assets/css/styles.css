@@ -1,0 +1,1474 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.3rem; /*52.7969px*/
+
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --hue: 152;
+  --first-color: hsl(var(--hue), 24%, 32%);
+  --first-color-alt: hsl(var(--hue), 24%, 28%);
+  --first-color-light: hsl(var(--hue), 24%, 66%);
+  --first-color-lighten: hsl(var(--hue), 24%, 92%);
+  --title-color: hsl(var(--hue), 4%, 15%);
+  --text-color: hsl(var(--hue), 4%, 35%);
+  --text-color-light: hsl(var(--hue), 4%, 45%);
+  --body-color: hsl(var(--hue), 0%, 100%);
+  --container-color: #FFF;
+  --link: #0f780c; 
+  --link-hover: #ff9900;
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: 'GHK TaungGyi', 'Poppins', sans-serif;
+  --big-font-size: 2rem;
+  --h1-font-size: 1.8rem;
+  --h2-font-size: 1.5rem;
+  --h3-font-size: 1.3rem;
+  --normal-font-size: 1.1rem;
+  --small-font-size: 1rem;
+  --smaller-font-size: .9rem;
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-too-bold: 700;
+  --font-too-too-bold: 900;
+
+  /*========== Margenes Bottom ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --mb-0-5: .5rem;
+  --mb-0-75: .75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+/* Responsive typography */
+@media screen and (min-width: 968px) {
+  :root {
+    --big-font-size: 3.3rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.8rem;
+    --h3-font-size: 1.5rem;
+    --normal-font-size: 1.1rem;
+    --small-font-size: 1rem;
+    --smaller-font-size: .9rem;
+  }
+}
+
+/*=============== BASE ===============*/
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body,
+button,
+input,
+textarea{
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+body{
+  margin: var(--header-height) 0 0 0;
+  background-color: var(--body-color);
+  color: var(--text-color);
+  transition: .4s; /*For animation dark mode*/
+}
+
+button{
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+h1,h2,h3{
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+
+a{
+  text-decoration: none;
+  color: var(--link);
+}
+
+a:hover{
+  color: var(--link-hover);
+}
+
+p{
+  font-family: 'GHK TaungGyi';
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+.nav__list{
+  list-style: none;
+}
+
+.nav__item i{
+  width: 1.2rem;
+  cursor: pointer;
+}
+
+/*=============== THEME ===============*/
+/*========== Variables Dark theme ==========*/
+body.dark-theme{
+  --first-color-dark: hsl(var(--hue), 8%, 20%);
+  --title-color: hsl(var(--hue), 4%, 95%);
+  --text-color: hsl(var(--hue), 4%, 75%);
+  --body-color: hsl(var(--hue), 8%, 12%);
+  --container-color: hsl(var(--hue), 8%, 16%);
+}
+
+/*========== Button Dark/Light ==========*/
+.change-theme{
+  color: var(--title-color);
+  font-size: 1.15rem;
+  cursor: pointer;
+}
+
+.nav__btns{
+  display: inline-flex;
+  align-items: center;
+  column-gap: 1rem;
+}
+
+/*========== Color changes in some parts of the website, in dark theme ==========*/
+.dark-theme .active-link{
+  color: var(--link-hover)
+}
+
+.dark-theme .steps__bg,
+.dark-theme .blog__card,
+.dark-theme .download{
+  background-color: var(--first-color-dark);
+}
+
+.dark-theme .blog__circle,
+.dark-theme .footer__subscribe{
+  background-color: var(--container-color);
+}
+
+.dark-theme .scroll-header{
+  box-shadow: 0 1px 4px hsla(var(--hue), 4%, 4%, .3);
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.section{
+  padding: 5.5rem 0 1rem;
+}
+
+.section__title,
+.section__title-center{
+  font-family: 'GHK Muse';
+  font-size: var(--h2-font-size);
+  margin-bottom: var(--mb-2);
+  line-height: 140%;
+}
+
+.section__title-center{
+  text-align: center;
+}
+
+.container{
+  max-width: 968px;
+  margin-left: var(--mb-1-5);
+  margin-right: var(--mb-1-5);
+}
+
+.grid{
+  display: grid;
+}
+
+.main{
+  overflow: hidden; /*For animation*/
+}
+
+/*=============== HEADER ===============*/
+.header{
+  width: 100%;
+  background-color: var(--body-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  transition: .4s; /*For animation dark mode*/
+}
+
+/*=============== NAV ===============*/
+.nav{
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo,
+.nav__toggle,
+.nav__close{
+  color: var(--title-color);
+}
+
+.nav__logo{
+  font-family: 'Arial Black';
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 1px;
+  display: inline-flex;
+  align-items: center;
+  column-gap: .5rem;
+  transition: .3s;
+}
+
+.my_logo{
+	max-width: 26px;
+}
+
+.nav__logo:hover{
+  color: var(--first-color);
+}
+
+.nav__toggle{
+  display: inline-flex;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 804px){
+  .nav__menu{
+    font-family: 'A J Kunheing E-T-M 02';
+    position: fixed;
+    background-color: var(--container-color);
+    width: 60%;
+    height: 100%;
+    top: 0;
+    right: -100%;
+    box-shadow: -2px 0 4px hsla(var(--hue), 24%, 15%, .1);
+    padding: 4rem 0 0 2.5rem;
+    border-radius: 1rem 0 0 1rem;
+    transition: .3s;
+    z-index: var(--z-fixed);
+  }
+  .nav__item i{
+    width: 1.4rem;
+    cursor: pointer;
+  }
+}
+
+.nav__close{
+  font-size: 1.5rem;
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
+  cursor: pointer;
+}
+
+.nav__list{
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+.nav__link{  
+  font-size: 1.2rem;
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+  transition: .3s;
+}
+
+.nav__link:hover{
+  color: var(--link-hover);
+}
+
+/* Show menu */
+.show-menu{
+  right: 0;
+}
+
+/* Change background header */
+.scroll-header{
+  box-shadow: 0 1px 4px hsla(var(--hue), 4%, 15%, .1);
+}
+
+/* Active link */
+.active-link{
+  position: relative;
+  color: #1f7003;
+  font-weight: bolder;
+}
+
+.nav__edit i{
+  font-size: 1.1rem;
+  align-items: center;
+}
+
+/*=============== HOME ===============*/
+.home{
+  padding: 3.5rem 0 2rem;  
+}
+
+.home__container{
+  position: relative;
+  row-gap: 2rem;  
+}
+
+.home__img{
+  width: 300px;
+  justify-self: center;
+}
+
+.hello{
+  font-family: 'KLO SHAN UNI'; 
+  font-size: var(--h3-font-size);
+}
+
+.home__title{
+  font-size: var(--big-font-size);
+  font-family: 'GHK Tachileik';
+  line-height: 140%;
+  margin-bottom: var(--mb-1);
+}
+
+.home__description{
+  margin-bottom: var(--mb-2-5);
+  font-family: 'GHK TaungGyi';
+}
+
+.pjaisu{
+  font-family: 'GHK KengTung';
+}
+
+.home__social{
+  position: absolute;
+  top: 3rem;
+  right: -1rem;
+  display: grid;
+  justify-items: center;
+  row-gap: 3.5rem;
+}
+
+.home__social-follow{
+  font-weight: var(--font-medium);
+  font-size: var(--smaller-font-size);
+  color: var(--first-color);
+  position: relative;
+  transform: rotate(90deg);
+}
+
+.home__social-follow::after{
+  content: '';
+  position: absolute;
+  width: 1.3rem;
+  height: 1px;
+  background-color: var(--first-color);
+  right: -45%;
+  top: 50%;
+}
+
+.home__social-links{
+  display: inline-flex;
+  flex-direction: column;
+  padding-top: .2rem;
+  row-gap: .1rem;
+}
+
+.home__social-link{
+  font-size: 1rem;
+  color: var(--first-color);
+  transition: .3s;
+}
+
+.home__social-link:hover{
+  transform: translateX(.25rem);
+}
+
+/*=============== BUTTONS ===============*/
+.button{
+  display: inline-block;
+  background-color: var(--first-color);
+  font-size: var(--smaller-font-size);
+  color: #FFF;
+  padding: .4rem 1rem;
+  border-radius: .5rem;
+  font-weight: var(--font-medium);
+  transition: .3s;
+}
+
+.button:hover{
+  background-color: var(--link-hover);
+  color: #fff;
+}
+
+.button__icon{
+  transition: .3s;
+}
+
+.button:hover .button__icon{
+  transform: translateX(.25rem);
+}
+
+.button--flex{
+  display: inline-flex;
+  align-items: center;
+  column-gap: .5rem;
+}
+
+.button--link{
+  font-family: 'Myanmar Pyay';
+  font-size: var(--small-font-size);
+  color: var(--text-color);
+}
+
+.button--link:hover .button__icon{
+  transform: translateX(.25rem);
+}
+
+/*=============== ABOUT ===============*/
+.about__container{
+  row-gap: 2rem;
+}
+
+.about__img{
+  width: 280px;
+  justify-self: center;
+  margin-top: 20px;
+}
+
+.about__title{
+  margin-bottom: var(--mb-1);
+}
+
+.about__description{
+  margin-bottom: var(--mb-0-5);
+}
+
+.about__details{
+  display: grid;
+  row-gap: 1rem;
+  margin-bottom: var(--mb-2-5);
+}
+
+.about__details-description{
+  display: inline-flex;
+  column-gap: .5rem;
+  font-size: var(--normal-font-size);
+}
+
+.about__details-description i{
+  margin-top: 5px;
+}
+
+.about__details-icon{
+  font-size: 1rem;
+  color: var(--first-color);
+  margin-top: .15rem;
+}
+
+/*=============== STEPS ===============*/
+.steps__bg{
+  background-color: var(--first-color);
+  padding: 3rem 2rem 2rem;
+  border-radius: 1rem;
+}
+
+.steps__container{
+  gap: 2rem;
+  padding-top: 1rem;
+}
+
+.steps__title{
+  color: #FFF;
+  font-family: 'GHK Muse';
+}
+
+.steps__card{
+  background-color: var(--container-color);
+  padding: 2.5rem 3rem 2rem 1.5rem;
+  border-radius: 1rem;
+}
+
+.steps__card:hover{
+  box-shadow: 0 0 10px rgb(207, 115, 2);
+}
+
+.steps__card p{
+  color: var(--text-color)
+}
+
+.steps__card p:hover{
+  color: var(--link-hover);
+}
+
+.steps__card h3:hover{
+  color: var(--link-hover);
+}
+
+.steps__card-number{
+  display: inline-block;
+  background-color: var(--first-color-alt);
+  color: #FFF;
+  padding: .1rem .8rem 0;
+  border-radius: .5rem;
+  font-size: var(--h2-font-size);
+  margin-bottom: var(--mb-1-5);
+  transition: .3s;
+}
+
+.steps__pc{
+  margin-right: -30px;
+}
+
+.steps__card-title{
+  font-family: 'GHK Muse';
+  font-size: var(--h3-font-size);
+  margin-bottom: var(--mb-0-5);
+  margin-right: -15px;
+}
+
+.steps_card_readmore{
+  margin-top: .5rem;
+  font-family: 'Myanmar Pyay';
+  font-size: var(--smaller-font-size);
+  color: var(--text-color-light);
+}
+
+.steps__card:hover .steps__card-number{
+  transform: translateY(-.25rem);
+}
+
+.steps__details{
+  display: inline-flex;
+  column-gap: .3rem;
+  font-size: var(--small-font-size);
+  transition: .3s;
+}
+
+.steps__details:hover{
+  transform: translateX(.25rem);
+}
+
+.steps__details i{
+  align-items: baseline;
+  font-size: .8rem;
+}
+
+/*=============== BLOG ===============*/
+.blog__description{
+  text-align: center;
+  font-size: var(--normal-font-size);
+  margin-top: -20px;
+  margin-bottom: -15px;
+}
+
+.blog__container{
+  padding: 3rem 0;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2.5rem 3rem;
+}
+
+.blog__container a{
+  transition: .3s;
+}
+
+.blog__container a:hover{
+  transform: translateY(-.5rem);
+}
+
+.blog__card{
+  background-color: var(--first-color-lighten);
+  border-radius: .5rem;
+  box-shadow: 0 0 2px rgba(96, 96, 96, 0.861);
+  display: grid;
+  position: relative;
+}
+
+.blog__card:hover{
+  box-shadow: 0 0 10px hsl(33, 98%, 41%);
+}
+
+.readmore{
+  font-family: 'Myanmar Pyay';
+  font-size: var(--smaller-font-size);
+  padding: .5rem 1rem 1rem .5rem;
+  text-align: right;
+  color: var(--text-color);
+}
+
+.readmore:hover{
+  color: var(--link-hover);
+}
+
+.blog_title{
+  font-family: 'GHK Tachileik';
+  font-weight: var(--font-medium);
+  padding: .5rem 1rem 0 1rem;
+  font-size: var(--h3-font-size);
+  color: var(--title-color);
+}
+
+.blog_title:hover{
+  color: var(--link-hover);
+}
+
+.blog_img{
+  width: 100%;
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+  border-bottom: var(--link-hover) solid .3rem;
+  cursor: pointer;
+}
+
+/*=============== DOWNLOAD ===============*/
+.download{
+  background-color: var(--first-color-lighten);
+}
+
+.download__container{
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+}
+
+.download__group{
+  display: grid;
+  row-gap: 1.5rem;
+}
+
+.download__item{
+  background-color: var(--container-color);
+  border-radius: .5rem;
+}
+
+.download__item-title{
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-semi-bold);
+  margin-bottom: -.1rem;
+}
+
+.download__icon{
+  font-size: 1.25rem;
+  color: var(--title-color);
+  margin-top: -.16rem;
+}
+
+.download__description{
+  font-size: var(--small-font-size);
+  padding: 0 1.25rem 1.25rem 2.5rem;
+}
+
+.download__description a{
+  color: #fff;
+}
+
+.download__description a:hover{
+  color: var(--link-hover);
+}
+
+.download__description span{
+  color: darkgray;
+}
+
+.download__header{
+  display: flex;
+  align-items: center;
+  column-gap: .5rem;
+  padding: .75rem .5rem;
+  cursor: pointer;
+}
+
+.download__content{
+  overflow: hidden;
+  height: 0;
+}
+
+.download__item,
+.download__header,
+.download__item-title,
+.download__icon,
+.download__description,
+.download__content{
+  transition: .3s;
+}
+
+.download__item:hover{
+  box-shadow: 0 2px 8px hsla(var(--hue), 4%, 15%, .15);
+}
+
+/*Rotate icon, change color of titles and background*/
+.accordion-open .download__header,
+.accordion-open .download__content{
+  background-color: var(--first-color);
+}
+
+.accordion-open .download__item-title,
+.accordion-open .download__description,
+.accordion-open .download__icon{
+  color: #fff;
+}
+
+.accordion-open .download__icon{
+  transform: rotate(45deg);
+}
+
+/*=============== CONTACT ===============*/
+.contact__container{
+  row-gap: 3.5rem;
+}
+
+.contact__container h2{
+  font-family: 'GHK Muse';
+}
+
+.contact__data{
+  display: grid;
+  row-gap: 2.5rem;
+}
+
+.contact__subtitle{
+  font-family: 'A J Kunheing 9';
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  color: var(--text-color-light);
+  margin-bottom: .5rem;
+}
+
+.contact__email{
+  margin-bottom: .1rem;
+}
+
+.contact__description{
+  display: inline-flex;
+  align-items: center;
+  column-gap: .3rem;
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+}
+
+.contact__description i{
+  margin-top: -.2rem;
+}
+
+.contact__description a{
+  display: inline-flex;
+  align-items: center;
+  column-gap: .5rem;
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+}
+.contact__description a:hover{
+  color: var(--link-hover);
+}
+
+.contact_social_links{
+  font-size: 1.4rem;
+  width: 2rem;
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+  transition: .3s;
+}
+.contact_social_links:hover{
+  transform: translateY(-.25rem);
+}
+
+.contact__icon{
+  font-size: 1.25rem;
+}
+
+.contact__inputs{
+  display: grid;
+  row-gap: 2rem;
+  margin-bottom: var(--mb-2-5);
+}
+
+.contact__content{
+  position: relative;
+  height: 3rem;
+  border-bottom: 1px solid var(--text-color-light);
+}
+
+.contact__input{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1rem 1rem 1rem 0;
+  background: none;
+
+  color: var(--text-color);
+
+  
+  border: none;
+  outline: none;
+  z-index: 1;
+}
+
+.contact__label{
+  position: absolute;
+  top: .75rem;
+  width: 100%;
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+  transition: .3s;
+}
+.contact__label i{
+  width: 1.1rem;
+}
+
+.contact__area{
+  height: 7rem;
+}
+
+.contact__area textarea{
+  resize: none;
+}
+
+/*Input focus move up label*/
+.contact__input:focus + .contact__label{
+  top: -.75rem;
+  left: 0;
+  font-size: var(--smaller-font-size);
+  z-index: 10;
+}
+
+/*Input focus sticky top label*/
+.contact__input:not(:placeholder-shown).contact__input:not(:focus) + .contact__label{
+  top: -.75rem;
+  font-size: var(--smaller-font-size);
+  z-index: 10;
+}
+
+/*=============== POST ===============*/
+.post_img{
+  text-align: center;
+}
+.post_img img{
+  border-radius: 1rem;
+}
+.post_title{
+  font-family: 'A J Kunheing E-T-M 00';
+  font-size: var(--h1-font-size);
+  font-weight: var(--font-medium);
+  color: var(--title-color);
+  padding: 25px 0 10px 0;
+}
+.post{
+  font-family: 'GHK TaungGyi';
+  font-size: var(--normal-font-size);
+}
+.meta{
+  color: var(--text-color-light);
+  font-family: 'A J Kunheing E-T-M 03';
+  font-size: var(--smaller-font-size);
+  padding-right: .8rem;
+}
+.write_by{
+  font-family: 'Myanmar Pyay';
+  font-size: var(--small-font-size);
+  color: var(--first-color);
+  text-align: right;
+  padding-bottom: 20px;
+}
+.post__container{
+  text-align: center;
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+}
+
+.post_img_grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: .5rem 1rem;
+  margin-top: .5rem;
+}
+
+/*=============== FOOTER ===============*/
+.footer__container{
+  row-gap: 3rem;
+}
+
+.footer__logo{
+  display: inline-flex;
+  align-items: center;
+  column-gap: .5rem;
+  font-family: 'A J Kunheing E-T-M 02';
+  font-size: var(--h3-font-size);
+  color: var(--title-color);
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-top: 1px;
+  margin-bottom: var(--mb-2-5);
+  transition: .3s;
+}
+.footer__logo-text{
+  margin-top: 2px;
+}
+
+.footer__logo img{
+	max-width: 33px;
+}
+
+.footer__logo-icon{
+  font-size: 1.15rem;
+  color: var(--first-color);
+}
+
+.footer__logo:hover{
+  color: var(--first-color);
+}
+
+.footer__title{
+  font-family: 'GHK Muse';
+  font-size: var(--h3-font-size);
+  margin-bottom: var(--mb-1-5);
+}
+
+.footer__subscribe{
+  background-color: var(--first-color-lighten);
+  padding: .75rem;
+  display: flex;
+  justify-content: space-between;
+  border-radius: .5rem;
+}
+
+.footer__input{
+  width: 70%;
+  padding: 0 .5rem;
+  background: none;
+  color: var(--text-color);
+  border: none;
+  outline: none;
+}
+
+.footer__button{
+  padding: 1rem;
+}
+
+.footer__data{
+  display: grid;
+  row-gap: .75rem;
+}
+
+.footer__information{
+  font-size: var(--small-font-size);
+  color: var(--text-color);
+  list-style: none;
+}
+.footer_phone:hover{
+  color: var(--link-hover);
+}
+
+.footer_address:hover{
+  color: var(--link-hover);
+}
+
+.footer__social{
+  display: inline-flex;
+  column-gap: .75rem;
+}
+
+.footer__social-link{
+  font-size: 1rem;
+  color: var(--text-color);
+  transition: .3s;
+}
+
+.footer__social-link:hover{
+  transform: translateY(-.25rem);
+}
+
+.footer__cards{
+  display: inline-flex;
+  align-items: center;
+  column-gap: .5rem;
+}
+.footer__card{
+  width: 45px;
+  transition: .3s;
+}
+.footer__card:hover{
+  transform: translateY(-.25rem);
+}
+
+.footer__copy{
+  text-align: center;
+  font-size: var(--smaller-font-size);
+  color: var(--text-color);
+  margin: 5rem 0 1rem;
+}
+
+.footer__info{
+  font-family: 'KLO SHAN UNI'; 
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-semi-bold);
+  margin-top: -15px;
+  list-style: none;
+}
+
+.web_share i{
+  font-size: var(--smaller-font-size);
+  color: var(--text-color);
+}
+
+.web_share:hover{
+  color: var(--link-hover);
+}
+
+.copy_link{
+  font-family: 'Arial Black';
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+.copy_link:hover{
+  font-weight: bold;
+  color: var(--link-hover);
+}
+
+.copy_marquee{
+  font-size: var(--smaller-font-size);
+  margin-bottom: 1.5rem;
+}
+
+/*=============== SCROLL UP ===============*/
+.scrollup{
+  position: fixed;
+  background-color: var(--first-color);
+  right: 1rem;
+  bottom: -30%;
+  display: inline-flex;
+  padding: .5rem;
+  border-radius: .25rem;
+  z-index: var(--z-tooltip);
+  opacity: .8;
+  transition: .4s;
+}
+
+.scrollup__icon{
+  font-size: 1rem;
+  color: #FFF;
+}
+
+.scrollup:hover{
+  background-color: var(--link-hover);
+  opacity: 1;
+}
+
+/* Show Scroll Up*/
+.show-scroll{
+  bottom: 3rem;
+}
+
+/*=============== SCROLL BAR ===============*/
+::-webkit-scrollbar{
+  width: .6rem;
+  background: hsl(var(--hue), 4%, 53%);
+}
+
+::-webkit-scrollbar-thumb{
+  background: hsl(var(--hue), 4%, 29%);
+  border-radius: .5rem;
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 320px){
+  .container{
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+  }
+  .footer__logo img{
+    max-width: 28px;
+  }
+
+  .home__img{
+    width: 200px;
+  }
+  .about__img{
+    width: 200px;
+  }
+
+  .home__title{
+    font-size: var(--h1-font-size);
+  }
+
+  .steps__bg{
+    padding: 2rem 1rem;
+  }
+  .steps__card{
+    padding: 1.5rem;
+  }
+
+  .blog__container{
+    grid-template-columns: .6fr;
+    justify-content: center;
+  }
+
+  .blog__container{
+    padding: 3rem 0;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2.5rem 3rem;
+  }
+
+  .blog__description {
+    text-align: center;
+    margin-top: -25px;
+    margin-bottom: -22px;
+    font-size: var(--normal-font-size);
+  }
+
+  .post_title {
+    font-size: var(--h2-font-size);
+  }
+
+}
+
+.post_img img{
+  width: 500px;
+  margin-top: -50px;
+}
+.post_img_grid{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: .5rem 1rem;
+  margin-top: .5rem;
+}
+
+.steps__card{
+    padding: 2.5rem 1.5rem 2rem;
+}
+  
+.steps__details{
+  display: block;
+  column-gap: .3rem;
+  font-size: var(--small-font-size);
+}
+  
+/* For medium devices */
+@media screen and (min-width: 576px){
+  .post_img img{
+    margin-top: -50px;
+  }
+  
+  .post_img_grid{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: .5rem 1rem;
+  }
+  .steps__container{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer__logo img{
+    max-width: 32px;
+  }
+
+  .blog__description{
+    margin-top: -25px;
+    margin-bottom: -15px;
+    padding: 0 4rem;
+  }
+  .blog__container{
+    grid-template-columns: repeat(2, 260px);
+    justify-content: center;
+    column-gap: 1.5rem;
+  }
+  
+  .footer__subscribe{
+    width: 400px;
+  }
+}
+
+@media screen and (min-width: 805px){
+  body{
+    margin: 0;
+  }
+  .post_img_grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: .5rem 1rem;
+    margin-top: .5rem;
+  }
+  .footer_logo img{
+    max-width: 28px;
+  }
+
+  .nav{
+    height: calc(var(--header-height) + 1.3rem);
+    column-gap: 2.2rem;
+  }
+  .nav__toggle,
+  .nav__close{
+    display: none;
+  }
+  .nav__list{
+    font-family: 'A J Kunheing E-T-M 02';
+    flex-direction: row;
+    column-gap: 2.2rem;
+  }
+
+  .nav__menu{
+    margin-left: auto;
+  }
+
+  .home__container,
+  .about__container,
+  .download__container,
+  .post__container,
+  .contact__container,
+  .footer__container{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .home{
+    padding: 10rem 0 5rem;
+  }
+  .home__container{
+    align-items: center;
+  }
+  .home__img{
+    width: 280px;
+    order: 1;
+  }
+  .home__social{
+    top: 30%;
+  }
+
+  .blog__container{
+    grid-template-columns: repeat(2, 350px);
+    justify-content: center;
+    column-gap: 1.5rem;
+  }
+
+  .download__container,
+  .post__container{
+    align-items: flex-start;
+  }
+
+  .footer__container{
+    column-gap: 1rem;
+  }
+  .footer__subscribe{
+    width: initial;
+  }
+  .post_img img{
+    margin-top: 30px;
+  }
+
+}
+
+/* For large devices */
+@media screen and (min-width: 992px){
+  .container{
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .footer__logo img{
+    max-width: 35px;
+  }
+  .post_img_grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: .5rem 1rem;
+    margin-top: .5rem;
+  }
+
+  .section{
+    padding: 8rem 0 1rem;
+  }
+  .section__title,
+  .section__title-center{
+    font-size: var(--h1-font-size);
+  }
+
+  .home{
+    padding: 13rem 0 5rem;
+  }
+  .home__img{
+    width: 400px;
+  }
+  .home__description{
+    padding-right: .1rem;
+  }
+
+  .about__img{
+    width: 380px;
+  }
+
+  .steps__container{
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .steps__bg{
+    padding: 3.5rem 2.5rem;
+  }
+  .steps__card-title{
+    font-size: 1.3rem;
+  }
+
+  .blog__description{
+    padding: 0 3rem;
+  }
+  
+  .blog__container{
+    padding: 3rem 0;
+    grid-template-columns: repeat(3, 300px);
+    gap: 3rem 1.5rem;
+  }
+ 
+  .download__container{
+    padding: 1rem 0 4rem;
+  }
+  .post__container{
+    text-align: center;
+    padding: 1rem 0 1rem;
+  }
+  .download__title{
+    text-align: center;
+  }
+  .download__group{
+    row-gap: 2rem;
+  }
+  .download__header{
+    padding: 1rem;
+  }
+  .download__description{
+    padding: 0 3.5rem 1.2rem 2.75rem;
+  }
+
+  .footer__logo{
+    font-size: var(--h3-font-size);
+  }
+  .footer__container{
+    grid-template-columns: .5fr .5fr .5fr .5fr;
+  }
+  .footer__copy{
+    margin: 7rem 0 2rem;
+  }
+  .post_img img{
+    margin-top: 1px;
+  }
+}
+
+@media screen and (min-width: 1200px){
+  .home__social{
+    right: -3rem;
+    row-gap: 4.5rem;
+  }
+  .home__social-follow{
+    font-size: var(--small-font-size);
+  }
+  .home__social-follow::after{
+    width: 1.5rem;
+    right: -60%;
+  }
+  .home__social-link{
+    font-size: 1.15rem;
+  }
+
+  .about__container{
+    column-gap: 3rem;
+  }
+  .post_img_grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: .5rem 1rem;
+    margin-top: .5rem;
+  }
+
+  .scrollup{
+    right: 5rem;
+  }
+}
+
+/* For Page No. */
+.col-12{position:relative; width:100%; margin-bottom: 1rem; padding-right:15px; padding-left:15px; -ms-flex:0 0 100%; flex:0 0 100%; max-width:100%}
+.mt-4{margin-top:.3rem!important}
+.pagination{display:-ms-flexbox;display:flex;padding-left:0;list-style:none;border-radius:.25rem}.page-link{position:relative;display:block;padding:.5rem .75rem;margin-left:-1px;line-height:1.25;color:#ff9900;background-color:#fff;border:1px solid #dee2e6}.page-link:hover{z-index:2;color:#928104;text-decoration:none;background-color:#ff9900;border-color:#dee2e6}.page-link:focus{z-index:3;outline:0;box-shadow:0 0 0 .2rem rgba(0,123,255,.25)}.page-item:first-child .page-link{margin-left:0;border-top-left-radius:.25rem;border-bottom-left-radius:.25rem}.page-item:last-child .page-link{border-top-right-radius:.25rem;border-bottom-right-radius:.25rem}.page-item.active .page-link{z-index:3;color:#fff;background-color:#937103;border-color:#ff0000}.page-item.disabled .page-link{color:#ada203;pointer-events:none;cursor:auto;background-color:#c2a905;border-color:#dee2e6}.pagination-lg .page-link{padding:.75rem 1.5rem;font-size:1.25rem;line-height:1.5}.pagination-lg .page-item:first-child .page-link{border-top-left-radius:.3rem;border-bottom-left-radius:.3rem}.pagination-lg .page-item:last-child .page-link{border-top-right-radius:.3rem;border-bottom-right-radius:.3rem}.pagination-sm .page-link{padding:.25rem .5rem;font-size:.875rem;line-height:1.5}.pagination-sm .page-item:first-child .page-link{border-top-left-radius:.2rem;border-bottom-left-radius:.2rem}.pagination-sm .page-item:last-child .page-link{border-top-right-radius:.2rem;border-bottom-right-radius:.2rem}
+.justify-content-center{-ms-flex-pack:center!important;justify-content:center!important}
+.mb-0{margin-bottom:0!important}
+
+.page-item.active .page-link {
+  color: #fff;
+}
+.page-link {
+  color: #666;
+  background-color: #eee;
+  border: 1px solid #eee;
+}
+
+.page-link {
+  font-size: var(--small-font-size);
+  color: #fff;
+  background-color: var(--first-color);
+  border: .1px solid #252525;
+  padding: 0;
+  margin: 0 2px;
+  border-radius: 50% !important;
+  width: 32px;
+  height: 32px;
+  line-height: 33px;
+  text-align: center;
+  transition: .3s;
+}
+
+.page-link:focus,
+.page-link:active{
+  box-shadow: none !important;
+}
+
+.page-link:hover {
+  color: #fff !important;
+  transform: translateY(-.23rem);
+}
+
+/* For Post Body */
+.post_body{
+  font-family: 'GHK TaungGyi';
+  font-size: var(--normal-font-size);
+}
+.post_body p{
+  text-indent: 2.2rem;
+}
+.post_body h2{
+  font-family: 'GHK Muse';
+}
+.post_body h3{
+  font-family: 'GHK Muse';
+}
+.post_body p{
+  text-align: justify;
+  padding-top: 8px;
+  padding-bottom: 16px;
+}
+.post_body ol{
+  padding-top: 8px;
+  padding-bottom: 16px;
+}
+
+.download_icon{
+  margin-right: 8px;
+}
+
+.post_body ol li{
+  margin-left: 35px;
+}
+.post_body ul li{
+  margin-left: 35px;
+}
