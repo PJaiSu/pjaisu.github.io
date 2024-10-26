@@ -1,0 +1,69 @@
+/*
+Fonts for PJai Su
+*/
+
+@font-face {
+    font-family: 'GHK TaungGyi';
+    src: url('assets/fonts/GHK_TaungGyi.ttf') format('truetype'),
+         url('assets/fonts/GHK_TaungGyi.woff2') format('woff2');
+  }
+  
+@font-face {
+    font-family: 'GHK Muse';
+    src: url('assets/fonts/GHK_Muse.ttf') format('truetype'),
+         url('assets/fonts/GHK_Muse.woff2') format('woff2');
+  }
+    
+@font-face {
+    font-family: 'GHK KengTung';
+    src: url('assets/fonts/GHK_KengTung.ttf') format('truetype'),
+         url('assets/fonts/GHK_KengTung.woff2') format('woff2');
+  }
+    
+@font-face {
+    font-family: 'GHK Tachileik';
+    src: url('assets/fonts/GHK_Tachileik.ttf') format('truetype'),
+         url('assets/fonts/GHK_Tachileik.woff2') format('woff2');
+  }
+       
+@font-face {
+    font-family: 'A J Kunheing 9';
+    src: url('assets/fonts/A_J_Kunheing_9.ttf') format('truetype'),
+         url('assets/fonts/A_J_Kunheing_9.woff2') format('woff2');
+  }
+      
+@font-face {
+    font-family: 'A J Kunheing E-T-M 00';
+    src: url('assets/fonts/A_J_Kunheing_E-T-M_00.ttf') format('truetype'),
+         url('assets/fonts/A_J_Kunheing_E-T-M_00.woff2') format('woff2');
+  }
+      
+@font-face {
+    font-family: 'A J Kunheing E-T-M 02';
+    src: url('assets/fonts/A_J_Kunheing_E-T-M_02.ttf') format('truetype'),
+         url('assets/fonts/A_J_Kunheing_E-T-M_02.woff2') format('woff2');
+  }
+      
+@font-face {
+    font-family: 'A J Kunheing E-T-M 03';
+    src: url('assets/fonts/A_J_Kunheing_E-T-M_03.ttf') format('truetype'),
+         url('assets/fonts/A_J_Kunheing_E-T-M_03.woff2') format('woff2');
+  }
+      
+@font-face {
+    font-family: 'Arial Black';
+    src: url('assets/fonts/Arial_Black.ttf') format('truetype'),
+         url('assets/fonts/Arial_Black.woff2') format('woff2');
+  }
+      
+@font-face {
+    font-family: 'KLO SHAN UNI';
+    src: url('assets/fonts/KLO_SHAN_UNI.ttf') format('truetype'),
+         url('assets/fonts/KLO_SHAN_UNI.woff2') format('woff2');
+  }
+      
+@font-face {
+    font-family: 'Myanmar Pyay';
+    src: url('assets/fonts/Myanmar_Pyay.ttf') format('truetype'),
+         url('assets/fonts/Myanmar_Pyay.woff2') format('woff2');
+  }

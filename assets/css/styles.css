@@ -65,6 +65,29 @@
 }
 
 /*=============== BASE ===============*/
+html, body {
+  width: 100%;
+  height:100%;
+}
+
+body ,header{
+    background: linear-gradient(-45deg, #ee765217, #e73c7e15, #23d5ab14);
+    background-size: 5000% 5000%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 *{
   box-sizing: border-box;
   padding: 0;
@@ -271,6 +294,9 @@ body.dark-theme{
     width: 1.4rem;
     cursor: pointer;
   }
+  .download__icon{
+    margin-left: .5rem;
+  }
 }
 
 .nav__close{
@@ -358,7 +384,7 @@ body.dark-theme{
 
 .home__social{
   position: absolute;
-  top: 3rem;
+  top: 1rem;
   right: -1rem;
   display: grid;
   justify-items: center;
@@ -473,7 +499,7 @@ body.dark-theme{
 }
 
 .about__details-description i{
-  margin-top: 5px;
+  margin-top: .4rem;
 }
 
 .about__details-icon{
@@ -510,7 +536,8 @@ body.dark-theme{
 }
 
 .steps__card p{
-  color: var(--text-color)
+  color: var(--text-color);
+  margin-top: .3rem;
 }
 
 .steps__card p:hover{
@@ -525,7 +552,7 @@ body.dark-theme{
   display: inline-block;
   background-color: var(--first-color-alt);
   color: #FFF;
-  padding: .1rem .8rem 0;
+  padding: .1rem 1rem 0;
   border-radius: .5rem;
   font-size: var(--h2-font-size);
   margin-bottom: var(--mb-1-5);
@@ -544,7 +571,8 @@ body.dark-theme{
 }
 
 .steps_card_readmore{
-  margin-top: .5rem;
+  padding-top: .5rem;
+  margin-left: .5rem;
   font-family: 'Myanmar Pyay';
   font-size: var(--smaller-font-size);
   color: var(--text-color-light);
@@ -665,12 +693,12 @@ body.dark-theme{
 .download__icon{
   font-size: 1.25rem;
   color: var(--title-color);
-  margin-top: -.16rem;
+  margin-top: -.14rem;
 }
 
 .download__description{
   font-size: var(--small-font-size);
-  padding: 0 1.25rem 1.25rem 2.5rem;
+  padding: .5rem 1.25rem 1.25rem 2.5rem;
 }
 
 .download__description a{
@@ -738,7 +766,7 @@ body.dark-theme{
 
 .contact__data{
   display: grid;
-  row-gap: 2.5rem;
+  row-gap: 2rem;
 }
 
 .contact__subtitle{
@@ -865,7 +893,7 @@ body.dark-theme{
 .post_title{
   font-family: 'A J Kunheing E-T-M 00';
   font-size: var(--h1-font-size);
-  font-weight: var(--font-medium);
+  
   color: var(--title-color);
   padding: 25px 0 10px 0;
 }
@@ -875,9 +903,13 @@ body.dark-theme{
 }
 .meta{
   color: var(--text-color-light);
-  font-family: 'A J Kunheing E-T-M 03';
-  font-size: var(--smaller-font-size);
+  font-family: 'A J Kunheing 9';
+  font-size: var(--small-font-size);
   padding-right: .8rem;
+  padding-bottom: 1.5rem;
+}
+.meta i{
+  font-size: .9rem;
 }
 .write_by{
   font-family: 'Myanmar Pyay';
@@ -1045,7 +1077,7 @@ body.dark-theme{
 
 .copy_marquee{
   font-size: var(--smaller-font-size);
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 /*=============== SCROLL UP ===============*/
@@ -1200,6 +1232,7 @@ body.dark-theme{
   body{
     margin: 0;
   }
+
   .post_img_grid{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1248,7 +1281,7 @@ body.dark-theme{
     order: 1;
   }
   .home__social{
-    top: 30%;
+    top: 10%;
   }
 
   .blog__container{
@@ -1271,7 +1304,6 @@ body.dark-theme{
   .post_img img{
     margin-top: 30px;
   }
-
 }
 
 /* For large devices */
@@ -1346,10 +1378,10 @@ body.dark-theme{
     row-gap: 2rem;
   }
   .download__header{
-    padding: 1rem;
+    padding: .6rem 1rem;
   }
   .download__description{
-    padding: 0 3.5rem 1.2rem 2.75rem;
+    padding: .5rem 3.5rem 1.2rem 2.75rem;
   }
 
   .footer__logo{
