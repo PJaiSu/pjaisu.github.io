@@ -9,3 +9,7 @@
 - Compatible with all mobile devices and with a beautiful and pleasant user interface.
 
 See my website here. [ၶဝ်ႈတူၺ်းတီႈၼႆႈ](https://pjaisu.github.io)
+
+![plants website](/preview.png)
+
+![plants website](/preview-d.png)
