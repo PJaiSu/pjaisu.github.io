@@ -368,7 +368,8 @@ body.dark-theme{
 
 .home__title{
   font-size: var(--big-font-size);
-  font-family: 'GHK Tachileik';
+  font-family: 'GHK KengTung';
+  font-weight: 200;
   line-height: 140%;
   margin-bottom: var(--mb-1);
 }
