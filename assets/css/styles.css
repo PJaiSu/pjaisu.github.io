@@ -148,6 +148,7 @@ img{
 
 .nav__item i{
   width: 1.2rem;
+  display: inline-flex;
   cursor: pointer;
 }
 
@@ -279,7 +280,7 @@ body.dark-theme{
   font-size: 1.1rem;
   font-weight: 100;
   color: #1f7003;
-  letter-spacing: .1px;
+  letter-spacing: 1px;
   margin-top: -.3rem;
 }
 
@@ -303,13 +304,14 @@ body.dark-theme{
     top: 0;
     right: -100%;
     box-shadow: -2px 0 4px hsla(var(--hue), 24%, 15%, .1);
-    padding: 4rem 0 0 2.5rem;
+    padding: 4rem 0 0 2rem;
     border-radius: 1rem 0 0 1rem;
     transition: .3s;
     z-index: var(--z-fixed);
   }
   .nav__item i{
     width: 1.4rem;
+    display: inline-flex;
     cursor: pointer;
   }
   .download__icon{
@@ -357,11 +359,6 @@ body.dark-theme{
   position: relative;
   color: #1f7003;
   font-weight: bolder;
-}
-
-.nav__edit i{
-  font-size: 1.1rem;
-  align-items: center;
 }
 
 /*=============== HOME ===============*/
@@ -875,6 +872,7 @@ body.dark-theme{
   transition: .3s;
 }
 .contact__label i{
+  display: inline-block;
   width: 1.1rem;
 }
 
@@ -1263,7 +1261,7 @@ body.dark-theme{
   }
 
   .nav{
-    height: calc(var(--header-height) + 1.3rem);
+    height: calc(var(--header-height) + .5rem);
     column-gap: 2rem;
   }
   .nav__toggle,
