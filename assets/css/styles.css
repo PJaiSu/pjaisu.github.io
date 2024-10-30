@@ -271,6 +271,7 @@ body.dark-theme{
 }
 
 .my__name{
+  margin-top: .35rem;
   display: block;
   list-style: none;
 }
@@ -281,7 +282,7 @@ body.dark-theme{
   font-weight: 100;
   color: #1f7003;
   letter-spacing: .17rem;
-  margin-top: -.22rem;
+  margin-top: -.31rem;
 }
 
 .nav__logo:hover{
