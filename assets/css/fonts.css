@@ -1,6 +1,11 @@
 /*
 Fonts for PJai Su
 */
+@font-face {
+     font-family: 'Ethnocentric';
+     src: url('../fonts/Ethnocentric.ttf') format('truetype'),
+          url('../fonts/Ethnocentric.woff2') format('woff2');
+   }
 
 @font-face {
     font-family: 'GHK TaungGyi';
