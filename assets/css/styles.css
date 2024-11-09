@@ -3,82 +3,82 @@
 
 /*=============== My FONTS ===============*/
 @font-face {
-     font-family: 'Ethnocentric';
-     src: url('../fonts/Ethnocentric.ttf') format('truetype'),
-          url('../fonts/Ethnocentric.woff2') format('woff2');
-   }
+  font-family: 'Ethnocentric';
+  src: url('../fonts/Ethnocentric.ttf') format('truetype'),
+       url('../fonts/Ethnocentric.woff2') format('woff2');
+}
 
 @font-face {
-    font-family: 'GHK TaungGyi';
-    src: url('../fonts/GHK_TaungGyi.ttf') format('truetype'),
-         url('../fonts/GHK_TaungGyi.woff2') format('woff2');
-  }
-  
-@font-face {
-    font-family: 'GHK Muse';
-    src: url('../fonts/GHK_Muse.ttf') format('truetype'),
-         url('../fonts/GHK_Muse.woff2') format('woff2');
-  }
-    
-@font-face {
-    font-family: 'GHK KengTung';
-    src: url('../fonts/GHK_KengTung.ttf') format('truetype'),
-         url('../fonts/GHK_KengTung.woff2') format('woff2');
-  }
-    
-@font-face {
-    font-family: 'GHK Tachileik';
-    src: url('../fonts/GHK_Tachileik.ttf') format('truetype'),
-         url('../fonts/GHK_Tachileik.woff2') format('woff2');
-  }
-       
-@font-face {
-    font-family: 'A J Kunheing 9';
-    src: url('../fonts/A_J_Kunheing_9.ttf') format('truetype'),
-         url('../fonts/A_J_Kunheing_9.woff2') format('woff2');
-  }
+ font-family: 'GHK TaungGyi';
+ src: url('../fonts/GHK_TaungGyi.ttf') format('truetype'),
+      url('../fonts/GHK_TaungGyi.woff2') format('woff2');
+}
 
-  @font-face {
-    font-family: 'A J Kunheing 16';
-    src: url('../fonts/A_J_Kunheing_16.ttf') format('truetype'),
-         url('../fonts/A_J_Kunheing_16.woff2') format('woff2');
-  }
-      
 @font-face {
-    font-family: 'A J Kunheing E-T-M 00';
-    src: url('../fonts/A_J_Kunheing_E-T-M_00.ttf') format('truetype'),
-         url('../fonts/A_J_Kunheing_E-T-M_00.woff2') format('woff2');
-  }
-      
+ font-family: 'GHK Muse';
+ src: url('../fonts/GHK_Muse.ttf') format('truetype'),
+      url('../fonts/GHK_Muse.woff2') format('woff2');
+}
+ 
 @font-face {
-    font-family: 'A J Kunheing E-T-M 02';
-    src: url('../fonts/A_J_Kunheing_E-T-M_02.ttf') format('truetype'),
-         url('../fonts/A_J_Kunheing_E-T-M_02.woff2') format('woff2');
-  }
-      
+ font-family: 'GHK KengTung';
+ src: url('../fonts/GHK_KengTung.ttf') format('truetype'),
+      url('../fonts/GHK_KengTung.woff2') format('woff2');
+}
+ 
 @font-face {
-    font-family: 'A J Kunheing E-T-M 03';
-    src: url('../fonts/A_J_Kunheing_E-T-M_03.ttf') format('truetype'),
-         url('../fonts/A_J_Kunheing_E-T-M_03.woff2') format('woff2');
-  }
-      
+ font-family: 'GHK Tachileik';
+ src: url('../fonts/GHK_Tachileik.ttf') format('truetype'),
+      url('../fonts/GHK_Tachileik.woff2') format('woff2');
+}
+    
 @font-face {
-    font-family: 'Arial Black';
-    src: url('../fonts/Arial_Black.ttf') format('truetype'),
-         url('../fonts/Arial_Black.woff2') format('woff2');
-  }
-      
+ font-family: 'A J Kunheing 9';
+ src: url('../fonts/A_J_Kunheing_9.ttf') format('truetype'),
+      url('../fonts/A_J_Kunheing_9.woff2') format('woff2');
+}
+
 @font-face {
-    font-family: 'KLO SHAN UNI';
-    src: url('../fonts/KLO_SHAN_UNI.ttf') format('truetype'),
-         url('../fonts/KLO_SHAN_UNI.woff2') format('woff2');
-  }
-      
+ font-family: 'A J Kunheing 16';
+ src: url('../fonts/A_J_Kunheing_16.ttf') format('truetype'),
+      url('../fonts/A_J_Kunheing_16.woff2') format('woff2');
+}
+   
 @font-face {
-    font-family: 'Myanmar Pyay';
-    src: url('../fonts/Myanmar_Pyay.ttf') format('truetype'),
-         url('../fonts/Myanmar_Pyay.woff2') format('woff2');
-  }
+ font-family: 'A J Kunheing E-T-M 00';
+ src: url('../fonts/A_J_Kunheing_E-T-M_00.ttf') format('truetype'),
+      url('../fonts/A_J_Kunheing_E-T-M_00.woff2') format('woff2');
+}
+   
+@font-face {
+ font-family: 'A J Kunheing E-T-M 02';
+ src: url('../fonts/A_J_Kunheing_E-T-M_02.ttf') format('truetype'),
+      url('../fonts/A_J_Kunheing_E-T-M_02.woff2') format('woff2');
+}
+   
+@font-face {
+ font-family: 'A J Kunheing E-T-M 03';
+ src: url('../fonts/A_J_Kunheing_E-T-M_03.ttf') format('truetype'),
+      url('../fonts/A_J_Kunheing_E-T-M_03.woff2') format('woff2');
+}
+   
+@font-face {
+ font-family: 'Arial Black';
+ src: url('../fonts/Arial_Black.ttf') format('truetype'),
+      url('../fonts/Arial_Black.woff2') format('woff2');
+}
+   
+@font-face {
+ font-family: 'KLO SHAN UNI';
+ src: url('../fonts/KLO_SHAN_UNI.ttf') format('truetype'),
+      url('../fonts/KLO_SHAN_UNI.woff2') format('woff2');
+}
+   
+@font-face {
+ font-family: 'Myanmar Pyay';
+ src: url('../fonts/Myanmar_Pyay.ttf') format('truetype'),
+      url('../fonts/Myanmar_Pyay.woff2') format('woff2');
+}
 
 /*=============== VARIABLES CSS ===============*/
 :root {
@@ -96,8 +96,8 @@
   --text-color-light: hsl(var(--hue), 4%, 45%);
   --body-color: hsl(var(--hue), 0%, 100%);
   --container-color: #FFF;
-  --link: #0f780c; 
-  --link-hover: #ff9900;
+  --link: #007700; 
+  --link-hover: #ff8800;
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
@@ -243,9 +243,16 @@ body.dark-theme{
 
 /*========== Button Dark/Light ==========*/
 .change-theme{
-  color: var(--title-color);
-  font-size: 1.15rem;
+  color: #fff;
+  font-size: 1rem;
+  background-color: var(--first-color);
+  padding: .3rem;
+  border-radius: .3rem;
   cursor: pointer;
+}
+
+.change-theme:hover{
+  background-color: var(--link-hover);
 }
 
 .nav__btns{
@@ -255,6 +262,10 @@ body.dark-theme{
 }
 
 /*========== Color changes in some parts of the website, in dark theme ==========*/
+.dark-theme .nav__logo:hover{
+  color: var(--link);
+}
+
 .dark-theme .active-link{
   color: var(--link-hover)
 }
@@ -338,7 +349,6 @@ body.dark-theme{
   font-family: 'Ethnocentric';
   text-transform: uppercase;
   font-weight: 900;
-  letter-spacing: 1px;
   display: inline-flex;
   align-items: center;
   column-gap: .5rem;
@@ -357,20 +367,20 @@ body.dark-theme{
 
 .my_name2{
   font-family: 'A J Kunheing 16';
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  letter-spacing: 1.1px;
   font-weight: 100;
   color: #1f7003;
-  letter-spacing: .17rem;
   margin-top: -.31rem;
 }
 
 .nav__logo:hover{
-  color: var(--first-color);
+  color: var(--link-hover);
 }
 
 .nav__toggle{
   display: inline-flex;
-  font-size: 1.25rem;
+  font-size: 1.4rem;
   cursor: pointer;
 }
 
@@ -403,7 +413,7 @@ body.dark-theme{
   font-size: 1.5rem;
   position: absolute;
   top: 1rem;
-  right: 1.25rem;
+  right: 1.45rem;
   cursor: pointer;
 }
 
@@ -527,7 +537,7 @@ body.dark-theme{
   background-color: var(--first-color);
   font-size: var(--smaller-font-size);
   color: #FFF;
-  padding: .3rem 1.1rem;
+  padding: .3rem 1rem;
   border-radius: .5rem;
   font-weight: var(--font-medium);
   transition: .3s;
@@ -1046,14 +1056,20 @@ body.dark-theme{
   font-size: var(--h3-font-size);
   color: var(--title-color);
   text-transform: uppercase;
-  font-weight: 800;
+  font-weight: 100;
   letter-spacing: 1px;
   margin-top: 1px;
   margin-bottom: var(--mb-2-5);
   transition: .3s;
 }
 .footer__logo-text{
-  margin-top: 2px;
+  color: #fff;
+  background-color: var(--first-color);
+  padding: .2rem .6rem;
+  border-radius: .33rem;
+}
+.footer__logo-text:hover{
+  background-color: var(--link-hover);
 }
 
 .footer__logo img{
@@ -1347,7 +1363,7 @@ body.dark-theme{
 
   .nav{
     height: calc(var(--header-height) + .5rem);
-    column-gap: 2rem;
+    column-gap: 1.2rem;
   }
   .nav__toggle,
   .nav__close{
@@ -1356,7 +1372,7 @@ body.dark-theme{
   .nav__list{
     font-family: 'A J Kunheing E-T-M 02';
     flex-direction: row;
-    column-gap: 2rem;
+    column-gap: 1.2rem;
   }
 
   .nav__menu{
