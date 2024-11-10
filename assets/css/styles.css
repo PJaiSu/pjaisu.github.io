@@ -251,10 +251,6 @@ body.dark-theme{
   cursor: pointer;
 }
 
-.change-theme:hover{
-  background-color: var(--link-hover);
-}
-
 .nav__btns{
   display: inline-flex;
   align-items: center;
