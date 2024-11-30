@@ -204,7 +204,7 @@
                             </p>   
                             <p class="steps_card_readmore steps__details">
                                 တူၺ်းထႅင်ႈ <i class="fa fa-arrow-circle-right"></i></p>
-                            </div></a>
+                        </div></a>
                             
                         <div class="steps__card">
                             <a href="#">
@@ -231,7 +231,7 @@
                             </p>   
                             <p class="steps_card_readmore steps__details">
                                 တူၺ်းထႅင်ႈ <i class="fa fa-arrow-circle-right"></i></p>
-                            </div></a>
+                        </div></a>
 
                         <div class="steps__card">
                             <a href="#">
@@ -239,7 +239,7 @@
                                 <i class="ri-computer-line"></i> Computer
                             </div>
                             <h3 class="steps__card-title">ၶွမ်ႇၽိဝ်ႇတိူဝ်ႇ(ၶွမ်း)</h3>
-                        <p>
+                            <p>
                             ႁပ်ႉပူင်သွၼ်ပၼ်ၶွမ်း
                             </p>
                             <p class="steps__details">
@@ -259,7 +259,7 @@
                             </p>   
                             <p class="steps_card_readmore steps__details">
                                 တူၺ်းထႅင်ႈ <i class="fa fa-arrow-circle-right"></i></p>
-                            </div></a>
+                        </div></a>
                     </div>
                 </div>
             </section>
@@ -557,7 +557,7 @@
                         </div>
                     </div>
 
-                    <form action="" class="contact__form">
+                    <form name="submit-to-google-sheet" action="" class="contact__form">
                         <div class="contact__inputs">
 
                             <div class="contact__content">
@@ -686,6 +686,19 @@
         
         <!--=============== MAIN JS ===============-->
         <script src="assets/js/main.js"></script>
+
+
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbzIVYZIQ-Sx00X74I7RVfRAK_Hj9h2YOgS6aybkhNF01tPe-5es82iO2PqQBUGhwH9UAg/exec'
+            const form = document.forms['submit-to-google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => console.log('Success!', response))
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
 
     </body>
 </html>
