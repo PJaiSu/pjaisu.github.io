@@ -749,7 +749,7 @@ body.dark-theme{
   font-family: 'GHK Tachileik';
   font-weight: var(--font-medium);
   padding: .5rem 1rem 0 1rem;
-  font-size: var(--h2-font-size);
+  font-size: 1px;
   color: var(--title-color);
 }
 
